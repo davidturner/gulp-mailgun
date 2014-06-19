@@ -1,0 +1,36 @@
+{
+  "name": "gulp-mailgun",
+  "version": "0.0.1",
+  "description": "Send emails though mailgun as part of your build",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "mailgun-send": "0.0.1"
+  },
+  "devDependencies": {
+    "lodash": "~2.4.1",
+    "mailgun-send": "0.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidturner/gulp-mailgun.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "mailgun"
+  ],
+  "author": {
+    "name": "Larry Davis",
+    "email": "lazdnet@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidturner/gulp-mailgun/issues"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
