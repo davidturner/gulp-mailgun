@@ -1,6 +1,6 @@
 {
   "name": "gulp-mailgun",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Send emails though mailgun as part of your build",
   "main": "index.js",
   "author": {
