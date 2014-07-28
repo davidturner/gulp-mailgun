@@ -5,7 +5,6 @@ This is my first attempt at writing a gulp plugin, so there is still probably qu
 Things that I know that I need to figure out:
 
 - Testing
-- Putting on NPM at some point and all the associated things to do with that.
 
 ## Basic Implemenation
 
