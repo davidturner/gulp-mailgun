@@ -19,7 +19,7 @@ function gulpMailgun(mailgunText) {
 
   'use strict';
   var _opts = mailgunText;
-  console.log(mailgunText);
+  
   if (!mailgunText) {
     throw new PluginError(PLUGIN_NAME, 'Missing prefix text!');
   }
