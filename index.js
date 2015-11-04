@@ -19,7 +19,7 @@ function gulpMailgun(mailgunText) {
 
   'use strict';
   var _opts = mailgunText;
-  
+
   if (!mailgunText) {
     throw new PluginError(PLUGIN_NAME, 'Missing prefix text!');
   }
@@ -33,12 +33,12 @@ function gulpMailgun(mailgunText) {
       _opts.body = '';
     }
     if (file.isBuffer()) {
-      file.contents = Buffer.concat([mailgunText, file.contents]);
+      file.contents = Buffer.concat([file.contents]);
       _opts.body = file.contents;
     }
 
     if (file.isStream()) {
-      file.contents = file.contents.pipe(mailgunStream(mailgunText));
+      // file.contents = file.contents.pipe(mailgunStream(mailgunText));
       _opts.body = file.contents;
     }
     mail = new Mailgun(_opts.key);
