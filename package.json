@@ -12,8 +12,9 @@
     "url": "https://github.com/davidturner/gulp-mailgun.git"
   },
   "keywords": [
-    "mailgun",
-    "mail"
+    "gulpplugin",
+    "gulpjs",
+    "mailgun"
   ],
   "license": "MIT",
   "bugs": {
@@ -21,26 +22,41 @@
   },
   "homepage": "https://github.com/davidturner/gulp-mailgun",
   "dependencies": {
-    "lodash": "~2.4.1",
-    "mailgun-send": "0.0.1",
-    "mailgun": "~0.4.2",
-    "coffee-script": "~1.6.3",
-    "gulp-util": "~2.2.12",
-    "through2": "~0.5.1"
+    "lodash": "~3.10.1",
+    "mailgun-send": "0.0.3",
+    "mailgun": "~0.5.0",
+    "coffee-script": "~1.10.0",
+    "gulp-util": "~3.0.7",
+    "through2": "~2.0.0"
   },
   "devDependencies": {
-    "lodash": "~2.4.1",
-    "mailgun-send": "0.0.1"
+    "lodash": "~3.10.1",
+    "mailgun-send": "0.0.3"
   },
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [
-    "gulpplugin",
-    "gulpjs",
-    "mailgun"
-  ],
   "engines": {
     "node": ">=0.8"
-  }
+  },
+  "_id": "gulp-mailgun@0.0.4",
+  "dist": {
+    "shasum": "791904f9eb7b85ab1bc49b8de3f2d9d7872cf32b",
+    "tarball": "http://registry.npmjs.org/gulp-mailgun/-/gulp-mailgun-0.0.4.tgz"
+  },
+  "_from": "gulp-mailgun@>=0.0.4 <0.0.5",
+  "_npmVersion": "1.4.3",
+  "_npmUser": {
+    "name": "davidturner",
+    "email": "david@davidturner.name"
+  },
+  "maintainers": [
+    {
+      "name": "davidturner",
+      "email": "david@davidturner.name"
+    }
+  ],
+  "directories": {},
+  "_shasum": "791904f9eb7b85ab1bc49b8de3f2d9d7872cf32b",
+  "_resolved": "https://registry.npmjs.org/gulp-mailgun/-/gulp-mailgun-0.0.4.tgz"
 }

@@ -16,13 +16,14 @@ function mailgunStream(mailgunText) {
 
 // Plugin level function(dealing with files)
 function gulpMailgun(mailgunText) {
+
   'use strict';
   var _opts = mailgunText;
-
+  console.log(mailgunText);
   if (!mailgunText) {
     throw new PluginError(PLUGIN_NAME, 'Missing prefix text!');
   }
-  mailgunText = new Buffer(mailgunText); // allocate ahead of time
+  mailgunText = new Buffer(JSON.stringify(mailgunText, null, 1)); // allocate ahead of time
 
   // Creating a stream through which each file will pass
   var stream = through.obj(function(file, enc, callback) {
