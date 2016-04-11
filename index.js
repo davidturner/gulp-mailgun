@@ -60,7 +60,6 @@ function gulpMailgun(mailgunText) {
       }
     });
 
-    this.push(file);
     return callback();
 
   });
