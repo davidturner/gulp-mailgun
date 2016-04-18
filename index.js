@@ -27,7 +27,14 @@ function gulpMailgun(mailgunText) {
 
   // Creating a stream through which each file will pass
   var stream = through.obj(function(file, enc, callback) {
-    var mail, raw;
+    var mail, raw, subject;
+
+    subject = _opts.subject;
+    
+    if (subject == null) {
+      subject = file.path.replace(file.cwd + '/dist/', '');
+    }
+
     if (file.isNull()) {
        // Do nothing if no contents
       _opts.body = '';
@@ -38,22 +45,21 @@ function gulpMailgun(mailgunText) {
     }
 
     if (file.isStream()) {
-      // file.contents = file.contents.pipe(mailgunStream(mailgunText));
       _opts.body = file.contents;
     }
     mail = new Mailgun(_opts.key);
+    
+    raw = "From: " + _opts.sender + "\nTo: " + _opts.recipient + "\nContent-Type: text/html; charset=utf-8\nSubject: " + subject + "\n\n " + _opts.body;
 
-    raw = "From: " + _opts.sender + "\nTo: " + _opts.recipient + "\nContent-Type: text/html; charset=utf-8\nSubject: " + _opts.subject + "\n\n " + _opts.body;
     mail.sendRaw(_opts.sender, _opts.recipient, raw, function(err) {
       if (err) {
         console.log('Please make sure you have entered your Mailgun API Key in your gulpfile');
         throw new PluginError(PLUGIN_NAME, 'Error: ' + err);
       } else {
-        console.log('Sent email to ' + _opts.recipient);
+        console.log('Sent file ' + file.path.replace(file.cwd + '/dist/', '') + ' to ' + _opts.recipient);
       }
     });
 
-    this.push(file);
     return callback();
 
   });
